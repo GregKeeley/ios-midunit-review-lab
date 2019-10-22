@@ -9,6 +9,14 @@ Input: `Hello, there`
 
 Output: `HELLO, THERE`
 
+Answer
+```swift
+let input1 = "hello there"
+
+let input1Uppercased = input1.uppercased()
+print(input1Uppercased)
+```
+
 2. **Given a String, return a String alternating between uppercase and lowercase letters**
 
 
@@ -16,6 +24,11 @@ Input: `Hello, there`
 
 Output: `HeLlO, tHeRe`
 
+
+Answer
+```swift
+
+```
 
 3. **Given a String, return a String with all occurrences of a given letter removed**
 
