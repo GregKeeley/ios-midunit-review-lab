@@ -25,9 +25,19 @@ Input: `Hello, there`
 Output: `HeLlO, tHeRe`
 
 
-Answer
+Answer (incomplete)
 ```swift
-
+var input2 = String()
+for (index, char) in input1.enumerated() {
+    if index % 2 == 0 {
+        input2 = String(char.uppercased())
+        print(char)
+    } else {
+        input2 = String(char)
+        print(char)
+    }
+}
+print(input2)
 ```
 
 3. **Given a String, return a String with all occurrences of a given letter removed**
@@ -36,6 +46,11 @@ Input: `Hello, there`
 
 Output: `Hllo, thr`
 
+Answer
+```swift
+var inputWithoutE = input1.replacingOccurrences(of: "e", with: "")
+print(inputWithoutE)
+```
 
 ## Arrays
 
@@ -46,17 +61,46 @@ Input: `[1,5,2,4,1,4]`
 
 Output: `5`
 
+Answer
+```swift
+var largestNumInArray = 0
+for num in input2Arr {
+    if num >= largestNumInArray {
+        largestNumInArray = num
+    }
+}
+print(largestNumInArray)
+```
+
 2. **Given an array of type [Int], return the smallest element**
 
 Input: `[1,5,2,4,1,4]`
 
 Output: `1`
 
+Answer
+```swift
+var smallestNumInArray = 0
+for num in input2Arr {
+    if num <= smallestNumInArray {
+        smallestNumInArray = num
+    }
+}
+print(smallestNumInArray)
+```
 3. **Given an array of type [Int], return its sum**
 
 Input: `[1,5,2,4,1,4]`
 
 Output: `17`
+
+Answer
+```swift
+var sumOfInput2Arr = input2Arr.reduce(0, { x, y
+    in x + y
+})
+print(sumOfInput2Arr)
+```
 
 4. **Given an array of type [Double], return its average**
 
@@ -64,12 +108,34 @@ Input: `[3,4.5,7.5,2,1]`
 
 Output: `3.6`
 
+Answer
+```swift
+let input4Total = inputArray4.reduce(0, { x, y
+    in x + y })
+let input4Average = (input4Total / (Double(inputArray4.count)))
+print(input4Total)
+print(input4Average)
+```
+
 5. **Given an array of type [Double] and a Double, return the sum of all numbers in the array greater than a given number**
 
 Input: `[3,4.5,7.5,2,1], 3`
 
 Output: `12`
 
+Answer (2 solutions)
+```swift
+var input5AverageAboveThree = Double()
+
+let filteredArray5Sum = inputArray5.filter { $0 > 3 }.reduce(0, + )
+for num in inputArray5 {
+    if num > 3 {
+    input5AverageAboveThree += num
+    }
+}
+print(input5AverageAboveThree)
+print(filteredArray5Sum)
+```
 
 6. **Given an array of type [Double], return the product of all the elements**
 
